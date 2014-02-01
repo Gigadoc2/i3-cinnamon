@@ -1,0 +1,21 @@
+pkgname=i3-cinnamon
+
+post_install() {
+  update-desktop-database -q
+  echo "In '~/.config/i3/config':"
+  echo "* use 'exec cinnamon-session-quit --logout'    : logout dialog"
+  echo "* use 'exec cinnamon-session-quit --power-off' : shutdown menu"
+  echo "If you have cinnamon-screensaver installed and want to use it:"
+  echo "* use 'exec cinnamon-screensaver-command -l'   : locks the screen"
+  echo "* use 'exec cinnamon-screensaver-lock-dialog   : lockscreen with message"
+}
+
+post_upgrade() {
+  post_install "$1"
+}
+
+post_remove() {
+  update-desktop-database -q
+}
+
+# vim:set ts=2 sw=2 et:

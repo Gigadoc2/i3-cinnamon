@@ -1,0 +1,5 @@
+[Cinnamon Session]
+Name=Cinnamon-i3
+RequiredComponents=i3-cinnamon;cinnamon-settings-daemon;
+DesktopName=GNOME
+
