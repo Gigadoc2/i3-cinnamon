@@ -6,7 +6,7 @@ _pkgname=i3
 pkgver=0.1
 pkgrel=1
 pkgdesc="Run i3 with cinnamon-session and cinnamon-settings-daemon"
-url="http://i3wm.org/"
+url="https://github.com/Gigadoc2/i3-cinnamon"
 arch=('any')
 license=('GPL')
 depends=("i3-wm>=4.0" "desktop-file-utils" "cinnamon-desktop")
