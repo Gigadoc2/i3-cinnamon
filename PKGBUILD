@@ -3,7 +3,7 @@
 # Contributor: Alexandre Isoard <alexandre.isoard@gmail.com>
 pkgname=i3-cinnamon
 _pkgname=i3
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Run i3 with cinnamon-session and cinnamon-settings-daemon"
 url="https://github.com/Gigadoc2/i3-cinnamon"
@@ -12,11 +12,12 @@ license=('GPL')
 depends=("i3-wm>=4.0" "desktop-file-utils" "cinnamon-desktop")
 
 install=$pkgname.install
-source=("$pkgname-xsession.desktop" "$pkgname" "$pkgname-app.desktop" "$pkgname.session")
-md5sums=('8d98cff29a6dc097bfd5fb021d9244be'
+source=("$pkgname-xsession.desktop" "$pkgname" "$pkgname-app.desktop" "$pkgname.session" "cinnamon-session-$_pkgname")
+md5sums=('06786b3f62d544731067a24e52902c9c'
          '0fb6c682b44e464ba5cd569e31694aba'
          'c69924f5975d9cc15fe04e68dd7f7195'
-         'c37e6b483b157951ff8e5a0543b38969')
+         'c37e6b483b157951ff8e5a0543b38969'
+         '9c9077b4819c331ccecdebb498c5e7c6')
 
 package() {
   msg "Install $pkgname in xsessions"
@@ -34,6 +35,10 @@ package() {
   msg "Install $pkgname in /usr/bin"
   install -D -m 755 "$srcdir/$pkgname" \
     "$pkgdir/usr/bin/$pkgname"
+
+  msg "Install cinnamon-session-$_pkgname in /usr/bin"
+  install -D -m 755 "$srcdir/cinnamon-session-$_pkgname" \
+    "$pkgdir/usr/bin/cinnamon-session-$_pkgname"
 }
 
 # vim:set ts=2 sw=2 et:
