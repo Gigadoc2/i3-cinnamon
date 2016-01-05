@@ -1,5 +1,5 @@
 [Cinnamon Session]
 Name=Cinnamon-i3
-RequiredComponents=i3-cinnamon;cinnamon-settings-daemon;
-DesktopName=GNOME
+RequiredComponents=i3-cinnamon;cinnamon-settings-daemon;cinnamon-screensaver;polkit-gnome-authentication-agent-1;
+DesktopName=X-Cinnamon
 
