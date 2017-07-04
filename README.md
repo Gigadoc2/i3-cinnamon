@@ -16,13 +16,16 @@ Cinnamon, just like other modern desktops, handles keybindings via its window ma
 ### Screen brightness
 Increase Brightness:
 `dbus-send --dest=org.cinnamon.SettingsDaemon.Power --type=method_call /org/cinnamon/SettingsDaemon/Power org.cinnamon.SettingsDaemon.Power.Screen.StepUp`
+
 Decrease Brightness:
 `dbus-send --dest=org.cinnamon.SettingsDaemon.Power --type=method_call /org/cinnamon/SettingsDaemon/Power org.cinnamon.SettingsDaemon.Power.Screen.StepDown`
 
 ### Keyboard Backlight
 Increase Brightness:
 `dbus-send --dest=org.cinnamon.SettingsDaemon.Power --type=method_call /org/cinnamon/SettingsDaemon/Power org.cinnamon.SettingsDaemon.Power.Keyboard.StepUp`
+
 Decrease Brightness:
 `dbus-send --dest=org.cinnamon.SettingsDaemon.Power --type=method_call /org/cinnamon/SettingsDaemon/Power org.cinnamon.SettingsDaemon.Power.Keyboard.StepDown`
+
 Toggle On/Off:
 `dbus-send --dest=org.cinnamon.SettingsDaemon.Power --type=method_call /org/cinnamon/SettingsDaemon/Power org.cinnamon.SettingsDaemon.Power.Keyboard.Toggle`
