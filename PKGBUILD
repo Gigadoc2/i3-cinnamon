@@ -28,7 +28,7 @@ package() {
   install -D -m 644 "$srcdir/$pkgname.session" \
     "$pkgdir/usr/share/cinnamon-session/sessions/$pkgname.session"
 
-  msg "Install $pkgname in /ush/share/applications"
+  msg "Install $pkgname in /usr/share/applications"
   install -D -m 644 "$srcdir/$pkgname-app.desktop" \
     "$pkgdir/usr/share/applications/$pkgname.desktop"
 
