@@ -1,5 +1,5 @@
 # Maintainer: Fabian Pack <gigadoc2@revreso.de>
-# original Maintainer: Klaas Boesche <aurkagebe@gmail.com>
+# Contributor: Klaas Boesche <aurkagebe@gmail.com>
 # Contributor: Alexandre Isoard <alexandre.isoard@gmail.com>
 pkgname=i3-cinnamon
 _pkgname=i3
