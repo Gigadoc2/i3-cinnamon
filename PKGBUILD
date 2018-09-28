@@ -4,12 +4,13 @@
 pkgname=i3-cinnamon
 _pkgname=i3
 pkgver=0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Run i3 with cinnamon-session and cinnamon-settings-daemon"
 url="https://github.com/Gigadoc2/i3-cinnamon"
 arch=('any')
 license=('GPL')
-depends=("i3-wm>=4.0" "desktop-file-utils" "cinnamon-desktop>=3.4" "cinnamon-screensaver" "polkit-gnome")
+depends=("i3-wm>=4.0" "desktop-file-utils" "cinnamon-session>=3.8" "cinnamon-settings-daemon>=3.8" "cinnamon-screensaver" "polkit-gnome")
+optdepends=('cinnamon: To change cinnamon settings via UI')
 
 install=$pkgname.install
 source=("$pkgname-xsession.desktop" "$pkgname" "$pkgname-app.desktop" "$pkgname.session" "cinnamon-session-$_pkgname")
